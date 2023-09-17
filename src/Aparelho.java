@@ -1,48 +1,62 @@
 import telefone.navegador.Navegador;
 import telefone.reprodutor.Reproducao;
 import telefone.telefone.Telefone;
-import telefone.telefone.TelefoneImpl;
 
-public class Aparelho {
-	
-	private TelefoneImpl telefone;
-	
-	private Navegador navegador;
-	
-	private Reproducao reproducao;
-	
-	public Aparelho() {
+public class Aparelho implements Telefone, Navegador, Reproducao{
+
+	@Override
+	public void tocar() {
+		System.out.println("Ouvindo musica.");
+		
+	}
+
+	@Override
+	public void pausar() {
+		System.out.println("Musica pausada.");
+		
+	}
+
+	@Override
+	public void selecionarMusica(String nome) {
+		System.out.println(nome + " selecionada.");
+		
+	}
+
+	@Override
+	public void exibirPagina() {
+		System.out.println("Exibindo página");
+		
+	}
+
+	@Override
+	public void adicionarNovaAba() {
+		System.out.println("Nova aba aberta");
+		
+	}
+
+	@Override
+	public void atualizarPagina() {
+		System.out.println("Pagina atualizada");
+		
+	}
+
+	@Override
+	public void ligar(Integer numero) {
+		System.out.println("Ligando para " + numero);
+		
+	}
+
+	@Override
+	public void atender() {
+		System.out.println("Atendendo ligação");
+		
+	}
+
+	@Override
+	public void iniciarCorreioVoz() {
+		System.out.println("Correio de voz");
 		
 	}
 	
-	public Aparelho(TelefoneImpl telefone, Navegador navegador, Reproducao reproducao) {
-		this.telefone = telefone;
-		this.navegador = navegador;
-		this.reproducao = reproducao;
-	}
-
-	public Telefone getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(TelefoneImpl telefone) {
-		this.telefone = telefone;
-	}
-
-	public Navegador getNavegador() {
-		return navegador;
-	}
-
-	public void setNavegador(Navegador navegador) {
-		this.navegador = navegador;
-	}
-
-	public Reproducao getReproducao() {
-		return reproducao;
-	}
-
-	public void setReproducao(Reproducao reproducao) {
-		this.reproducao = reproducao;
-	}
-
+	
 }

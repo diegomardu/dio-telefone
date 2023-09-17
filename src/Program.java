@@ -5,20 +5,24 @@ public class Program {
 		
 		Aparelho aparelho = new Aparelho();
 		
-		/*
-		 * System.out.println("------------->"); aparelho.getReproducao("Los Hermanos");
-		 * aparelho.tocar(); aparelho.pausar();
-		 */
+		
+		System.out.println("------------->"); 
+		aparelho.selecionarMusica("Los Hermanos");
+		aparelho.tocar(); 
+		aparelho.pausar();
+		 
 
 	    System.out.println("------------->");
-	    aparelho.getTelefone().atender();
-	    aparelho.getTelefone().iniciarCorreioVoz();
-	    aparelho.getTelefone().ligar(40028922);
+	    aparelho.atender();
+	    aparelho.iniciarCorreioVoz();
+	    aparelho.ligar(40028922);
 
-		/*
-		 * System.out.println("------------->"); aparelho.exibirPagina();
-		 * aparelho.atualizarPagina(); aparelho.adicionarNovaAba();
-		 */
+		
+		System.out.println("------------->"); 
+		aparelho.exibirPagina();
+		aparelho.atualizarPagina(); 
+		aparelho.adicionarNovaAba();
+		 
 
 	    System.out.println("------------->");
 	}
